@@ -1,4 +1,4 @@
-{ lib, less, ncurses, buildGoModule, fetchFromGitHub, makeWrapper }:
+{ lib, less, ncurses, buildGoModule, fetchFromGitHub, makeWrapper, stdenv, xdg-utils }:
 
 buildGoModule rec {
   pname = "circumflex";
@@ -17,7 +17,7 @@ buildGoModule rec {
 
   postInstall = ''
     wrapProgram $out/bin/clx \
-      --prefix PATH : ${lib.makeBinPath [ less ncurses ]}
+      --prefix PATH : ${lib.makeBinPath (lib.optionals stdenv.isLinux [ xdg-utils ] ++ [ less ncurses ])}
   '';
 
   meta = with lib; {
