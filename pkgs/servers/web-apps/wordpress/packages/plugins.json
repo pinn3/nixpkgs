@@ -137,6 +137,12 @@
     "sha256": "1ah2gbm5aiqa4yw3kfhx49n6j3jyl6s44s9c5xqnpsjxr211h7p4",
     "version": "0.25.6"
   },
+  "woocommerce": {
+    "path": "woocommerce/tags/8.2.1",
+    "rev": "2979731",
+    "sha256": "18w5q4lk0d0bcvsb8ryjrxh1ysapqxksg92n7axsckb1pbnc0vwf",
+    "version": "8.2.1"
+  },
   "wordpress-seo": {
     "path": "wordpress-seo/tags/20.7",
     "rev": "2909990",
